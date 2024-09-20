@@ -1,7 +1,7 @@
 /* 全局样式 */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-color: #f0f0f0;
 }
 
 /* 导航栏样式 */
@@ -83,4 +83,8 @@ body {
 /* 添加动画类 */
 .animate__animated {
     animation-duration: 1s;
+}
+
+h1 {
+    color: #333;
 }
