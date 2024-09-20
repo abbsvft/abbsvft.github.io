@@ -1,1 +1,0 @@
-console.log("JavaScript文件已成功加载");
