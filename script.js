@@ -58,3 +58,32 @@ document.getElementById('back-to-top').onclick = function() {
 
 // 照片轮播功能
 // 这里可以使用Bootstrap的Carousel组件或自定义实现
+
+// 初始化Swiper
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+// 添加滚动动画
+function addScrollAnimation() {
+    const elements = document.querySelectorAll('.animate__animated');
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight) {
+            element.classList.add('animate__fadeInUp');
+        }
+    });
+}
+
+window.addEventListener('scroll', addScrollAnimation);
+window.addEventListener('load', addScrollAnimation);
+
+// 其他JavaScript代码保持不变

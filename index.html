@@ -3,42 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>您的名字 - 个人网站</title>
+    <title>梦山南 - 个人网站</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <!-- 导航栏内容 -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">梦山南</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">关于</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="openAIChat()">AI助手</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">联系</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <header class="hero">
-        <!-- 英雄区内容 -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="animate__animated animate__fadeInLeft">梦山南</h1>
+                    <p class="lead animate__animated animate__fadeInLeft animate__delay-1s">网页开发者 & 设计师</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/profile-photo.jpg" alt="梦山南的照片" class="img-fluid rounded-circle animate__animated animate__fadeInRight">
+                </div>
+            </div>
+        </div>
     </header>
 
-    <section class="ai-assistant-intro">
-        <!-- AI助手引导区内容 -->
+    <section id="about" class="about-me py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">关于我</h2>
+            <p class="animate__animated">这里是您的个人简介。描述您的技能、经验和兴趣。让访问者了解您是谁，您能做什么。</p>
+        </div>
     </section>
 
-    <section class="photo-carousel">
-        <!-- 照片轮播区内容 -->
+    <section class="photo-carousel py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">我的作品</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="path/to/project1.jpg" alt="项目1"></div>
+                    <div class="swiper-slide"><img src="path/to/project2.jpg" alt="项目2"></div>
+                    <div class="swiper-slide"><img src="path/to/project3.jpg" alt="项目3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
     </section>
 
-    <section class="about-me">
-        <!-- 关于我区域内容 -->
+    <section id="portfolio" class="portfolio py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">作品集</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="path/to/project1-thumbnail.jpg" class="card-img-top" alt="项目1">
+                        <div class="card-body">
+                            <h5 class="card-title">项目1</h5>
+                            <p class="card-text">项目1的简短描述。</p>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 添加更多项目卡片 -->
+            </div>
+        </div>
     </section>
 
-    <section class="portfolio">
-        <!-- 作品集区域内容 -->
+    <section id="contact" class="contact-form py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">联系我</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="您的姓名">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="您的邮箱">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="5" placeholder="您的消息"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">发送消息</button>
+            </form>
+        </div>
     </section>
 
-    <section class="contact-form">
-        <!-- 联系表单内容 -->
-    </section>
-
-    <footer>
-        <!-- 页脚区域内容 -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 梦山南. 保留所有权利。</p>
+            <div class="social-icons">
+                <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
     <div id="ai-chat-modal" class="modal">
@@ -50,5 +124,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
